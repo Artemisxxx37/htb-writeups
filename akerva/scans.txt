@@ -1,0 +1,82 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 04:54 CST
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+Initiating Ping Scan at 04:54
+Scanning 10.13.37.11 [4 ports]
+Completed Ping Scan at 04:54, 0.23s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 04:54
+Completed Parallel DNS resolution of 1 host. at 04:54, 0.01s elapsed
+Initiating SYN Stealth Scan at 04:54
+Scanning 10.13.37.11 [65535 ports]
+Discovered open port 22/tcp on 10.13.37.11
+Discovered open port 80/tcp on 10.13.37.11
+Discovered open port 5000/tcp on 10.13.37.11
+Increasing send delay for 10.13.37.11 from 0 to 5 due to max_successful_tryno increase to 5
+Increasing send delay for 10.13.37.11 from 5 to 10 due to max_successful_tryno increase to 6
+Completed SYN Stealth Scan at 04:54, 13.06s elapsed (65535 total ports)
+Initiating Service scan at 04:54
+Scanning 3 services on 10.13.37.11
+Completed Service scan at 04:54, 7.22s elapsed (3 services on 1 host)
+NSE: Script scanning 10.13.37.11.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 6.46s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.89s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.01s elapsed
+Nmap scan report for 10.13.37.11
+Host is up, received reset ttl 63 (0.20s latency).
+Scanned at 2025-03-05 04:54:04 CST for 28s
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 0d:e4:41:fd:9f:a9:07:4d:25:b4:bd:5d:26:cc:4f:da (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCYsb2eP012xQGyABOzy+gWdxyHIa7xFBkwpLlFOBlYVsJp87Vtve02GudeSUjrz59c7y5nJkLxJAKQRXIObz/jzvCUkTMjH56Mc/3hzdkAzlWg/Gq3vNTyOLODkPPInJGGk1WgovnLcAJtNgdXaO7nYrDqyC8eCjBt7ppsONrz9FmEbiqLQl1m/LYb7Em6X1ZviytlJeH7eEk3UcKX45sNpzaUINdf1PJnXK3CLTB+vEAaieWz1GzCMsuRMphsmnW/d2ObpfZfCMa/NKYpAi0Z6yxUlI/HPEOWNnWO45OZ+7+M8NTxklZCHUbeCDhK8YSnpXtaEFPZvKajqZB+F2tR
+|   256 f7:65:51:e0:39:37:2c:81:7f:b5:55:bd:63:9c:82:b5 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEKLumcSSQuW4qihcz0zZyca/KvBaXlysVAvY/DqLV0vo4bPoz+PH0qP7vuSlgCIqdiyJKq5JFfJz58e4kujk90=
+|   256 28:61:d3:5a:b9:39:f2:5b:d7:10:5a:67:ee:81:a8:5e (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINAqCT5KghTKGzjImXygZG4vYKvk0akCYJaonX3hXvkE
+80/tcp   open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Root of the Universe &#8211; by @lydericlefebvre &amp; @akerva_fr
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-generator: WordPress 5.4-alpha-47225
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: 6A6F2809F13E037DDC8D625B58FDA218
+5000/tcp open  http    syn-ack ttl 63 Python BaseHTTPServer http.server 2 or 3.0 - 3.1
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| http-auth: 
+| HTTP/1.0 401 UNAUTHORIZED\x0D
+|_  Basic realm=Authentication Required
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS GET
+|_http-server-header: Werkzeug/0.16.0 Python/2.7.15+
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 04:54
+Completed NSE at 04:54, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 28.40 seconds
+           Raw packets sent: 115990 (5.104MB) | Rcvd: 94933 (3.797MB)

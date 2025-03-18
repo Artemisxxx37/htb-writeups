@@ -1,0 +1,12 @@
+port 80 
+source code --- AKERVA{Ikn0w_F0rgoTTEN#CoMmeNts}
+snmp service in udp ; walk in it AKERVA{IkN0w_SnMP@@@MIsconfigur@T!onS}  + got a path to /var/www/html/scripts/backup_every_17minutes.sh
+curl it using Post to view his content coz it can't be downloaded curl -X POST htt^://ip/scripts/backup_every_17minutes.sh ...--- AKERVA{IKNoW###VeRbTamper!nG_==}
+
+
+
+
+
+port 5000
+/////potentials users : arthur / aas
+found a secret key   = "0s3g2U7qhBp5k3MDakcI"

