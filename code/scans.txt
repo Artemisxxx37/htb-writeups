@@ -1,0 +1,75 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-24 11:51 CDT
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating Ping Scan at 11:51
+Scanning 10.129.43.141 [4 ports]
+Completed Ping Scan at 11:51, 0.16s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:51
+Completed Parallel DNS resolution of 1 host. at 11:51, 0.03s elapsed
+Initiating SYN Stealth Scan at 11:51
+Scanning 10.129.43.141 [65535 ports]
+Discovered open port 22/tcp on 10.129.43.141
+Discovered open port 5000/tcp on 10.129.43.141
+Increasing send delay for 10.129.43.141 from 0 to 5 due to max_successful_tryno increase to 5
+Increasing send delay for 10.129.43.141 from 5 to 10 due to max_successful_tryno increase to 6
+Warning: 10.129.43.141 giving up on port because retransmission cap hit (6).
+Completed SYN Stealth Scan at 11:51, 13.17s elapsed (65535 total ports)
+Initiating Service scan at 11:51
+Scanning 2 services on 10.129.43.141
+Completed Service scan at 11:52, 6.53s elapsed (2 services on 1 host)
+NSE: Script scanning 10.129.43.141.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 11:52
+Stats: 0:00:25 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 5 (5 waiting)
+NSE Timing: About 98.26% done; ETC: 11:52 (0:00:00 remaining)
+Completed NSE at 11:52, 5.14s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 11:52
+Completed NSE at 11:52, 0.52s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 11:52
+Completed NSE at 11:52, 0.01s elapsed
+Nmap scan report for 10.129.43.141
+Host is up, received reset ttl 63 (0.12s latency).
+Scanned at 2025-03-24 11:51:41 CDT for 26s
+Not shown: 65533 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 b5:b9:7c:c4:50:32:95:bc:c2:65:17:df:51:a2:7a:bd (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCrE0z9yLzAZQKDE2qvJju5kq0jbbwNh6GfBrBu20em8SE/I4jT4FGig2hz6FHEYryAFBNCwJ0bYHr3hH9IQ7ZZNcpfYgQhi8C+QLGg+j7U4kw4rh3Z9wbQdm9tsFrUtbU92CuyZKpFsisrtc9e7271kyJElcycTWntcOk38otajZhHnLPZfqH90PM+ISA93hRpyGyrxj8phjTGlKC1O0zwvFDn8dqeaUreN7poWNIYxhJ0ppfFiCQf3rqxPS1fJ0YvKcUeNr2fb49H6Fba7FchR8OYlinjJLs1dFrx0jNNW/m3XS3l2+QTULGxM5cDrKip2XQxKfeTj4qKBCaFZUzknm27vHDW3gzct5W0lErXbnDWQcQZKjKTPu4Z/uExpJkk1rDfr3JXoMHaT4zaOV9l3s3KfrRSjOrXMJIrImtQN1l08nzh/Xg7KqnS1N46PEJ4ivVxEGFGaWrtC1MgjMZ6FtUSs/8RNDn59Pxt0HsSr6rgYkZC2LNwrgtMyiiwyas=
+|   256 94:b5:25:54:9b:68:af:be:40:e1:1d:a8:6b:85:0d:01 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDiXZTkrXQPMXdU8ZTTQI45kkF2N38hyDVed+2fgp6nB3sR/mu/7K4yDqKQSDuvxiGe08r1b1STa/LZUjnFCfgg=
+|   256 12:8c:dc:97:ad:86:00:b4:88:e2:29:cf:69:b5:65:96 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP8Cwf2cBH9EDSARPML82QqjkV811d+Hsjrly11/PHfu
+5000/tcp open  http    syn-ack ttl 63 Gunicorn 20.0.4
+|_http-server-header: gunicorn/20.0.4
+|_http-title: Python Code Editor
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 11:52
+Completed NSE at 11:52, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 11:52
+Completed NSE at 11:52, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 11:52
+Completed NSE at 11:52, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 26.10 seconds
+           Raw packets sent: 121475 (5.345MB) | Rcvd: 99724 (3.989MB)
