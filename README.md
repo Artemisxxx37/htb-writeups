@@ -64,4 +64,14 @@ find / -perm -4000 2>/dev/null
 
 ---
 
-## 🛠️ Tools Used
+## COvered² Machines
+![Catch](https://github.com/user-attachments/assets/16475ce5-7446-40f9-bb06-4ae1ff9d9a40)
+
+![Code](https://github.com/user-attachments/assets/479c514e-0f01-462b-820f-14d881d4aece)
+
+![Lame](https://github.com/user-attachments/assets/49530a10-3ed0-4b35-bb46-c325f83a912f)
+
+
+![TheFrizz](https://github.com/user-attachments/assets/b66734d7-ddac-4458-83a7-ff52634429ec)
+
+![WhiteRabbit](https://github.com/user-attachments/assets/cd8c0154-e35c-45c1-87c1-c4e7f82f0500)
