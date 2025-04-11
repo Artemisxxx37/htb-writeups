@@ -1,0 +1,23 @@
+# Dirsearch started Fri Apr 11 03:50:16 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://status.whiterabbit.htb/ -r
+
+301   179B   http://status.whiterabbit.htb/assets    -> REDIRECTS TO: /assets/
+200    15KB  http://status.whiterabbit.htb/favicon.ico
+200   415B   http://status.whiterabbit.htb/manifest.json
+401     0B   http://status.whiterabbit.htb/metrics/
+401     0B   http://status.whiterabbit.htb/metrics
+200    25B   http://status.whiterabbit.htb/robots.txt
+301   189B   http://status.whiterabbit.htb/screenshots    -> REDIRECTS TO: /screenshots/
+404     2KB  http://status.whiterabbit.htb/status
+404     2KB  http://status.whiterabbit.htb/status/
+404     2KB  http://status.whiterabbit.htb/status?full=true
+404    15B   http://status.whiterabbit.htb/upload/
+404    15B   http://status.whiterabbit.htb/upload/1.php
+301   179B   http://status.whiterabbit.htb/Upload    -> REDIRECTS TO: /Upload/
+301   179B   http://status.whiterabbit.htb/upload    -> REDIRECTS TO: /upload/
+404    15B   http://status.whiterabbit.htb/upload/test.txt
+404    15B   http://status.whiterabbit.htb/upload/b_user.xls
+404    15B   http://status.whiterabbit.htb/upload/upload.php
+404    15B   http://status.whiterabbit.htb/upload/test.php
+404    15B   http://status.whiterabbit.htb/upload/b_user.csv
+404    15B   http://status.whiterabbit.htb/upload/2.php
+404    15B   http://status.whiterabbit.htb/upload/loginIxje.php

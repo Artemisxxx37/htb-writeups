@@ -1,0 +1,80 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-08 06:43 CDT
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+Initiating Ping Scan at 06:43
+Scanning status.whiterabbit.htb (10.129.107.206) [4 ports]
+Completed Ping Scan at 06:43, 0.15s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 06:43
+Scanning status.whiterabbit.htb (10.129.107.206) [65535 ports]
+Discovered open port 22/tcp on 10.129.107.206
+Discovered open port 80/tcp on 10.129.107.206
+Increasing send delay for 10.129.107.206 from 0 to 5 due to max_successful_tryno increase to 5
+Increasing send delay for 10.129.107.206 from 5 to 10 due to max_successful_tryno increase to 6
+Warning: 10.129.107.206 giving up on port because retransmission cap hit (6).
+Discovered open port 2222/tcp on 10.129.107.206
+Completed SYN Stealth Scan at 06:43, 20.08s elapsed (65535 total ports)
+Initiating Service scan at 06:43
+Scanning 3 services on status.whiterabbit.htb (10.129.107.206)
+Completed Service scan at 06:43, 6.28s elapsed (3 services on 1 host)
+NSE: Script scanning 10.129.107.206.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 3.75s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.52s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.01s elapsed
+Nmap scan report for status.whiterabbit.htb (10.129.107.206)
+Host is up, received reset ttl 63 (0.47s latency).
+rDNS record for 10.129.107.206: whiterabbit.htb
+Scanned at 2025-04-08 06:43:11 CDT for 31s
+Not shown: 58655 closed tcp ports (reset), 6877 filtered tcp ports (no-response)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 9.6p1 Ubuntu 3ubuntu13.9 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 0f:b0:5e:9f:85:81:c6:ce:fa:f4:97:c2:99:c5:db:b3 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBslomQGZRF6FPNyXmI7hlh/VDhJq7Px0dkYQH82ajAIggOeo6mByCJMZTpOvQhTxV2QoyuqeKx9j9fLGGwkpzk=
+|   256 a9:19:c3:55:fe:6a:9a:1b:83:8f:9d:21:0a:08:95:47 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEoXISApIRdMc65Kw96EahK0EiPZS4KADTbKKkjXSI3b
+80/tcp   open  http    syn-ack ttl 62 Caddy httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-favicon: Unknown favicon MD5: E4ED8E71BA8F67C89B305AAB8F641790
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-title: Uptime Kuma
+|_Requested resource was /dashboard
+|_http-server-header: Caddy
+2222/tcp open  ssh     syn-ack ttl 62 OpenSSH 9.6p1 Ubuntu 3ubuntu13.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 c8:28:4c:7a:6f:25:7b:58:76:65:d8:2e:d1:eb:4a:26 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKu1+ymf1qRT1c7pGig7JS8MrnSTvbycjrPWQfRLo/DM73E24UyLUgACgHoBsen8ofEO+R9dykVEH34JOT5qfgQ=
+|   256 ad:42:c0:28:77:dd:06:bd:19:62:d8:17:30:11:3c:87 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJTObILLdRa6Jfr0dKl3LqWod4MXEhPnadfr+xGSWTQ+
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 06:43
+Completed NSE at 06:43, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.23 seconds
+           Raw packets sent: 161046 (7.086MB) | Rcvd: 110731 (4.429MB)
