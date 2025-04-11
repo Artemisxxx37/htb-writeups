@@ -1,3 +1,6 @@
+
+
+
 impacket-getTGT frizz.htb/f.frizzle:Jenni_Luvs_Magic23 -dc-ip $victim 
 Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
 [*] Saving ticket in f.frizzle.ccache
