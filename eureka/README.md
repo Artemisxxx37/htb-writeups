@@ -59,3 +59,15 @@ walking around , just found mysql service get started , let's investigate
 
 ![Screenshot_2025-04-28_11_46_32](https://github.com/user-attachments/assets/c7376c4c-846d-4f96-ae62-37a64bb14317)
 	
+Now , we've checked all we can do , fordward the 8761 onto your localhost host:
+		ssh -L 8761:localhost:8761 user@furni.htb
+  paste the pass and now access to the web service 
+
+  ![Screenshot_2025-04-28_12_18_29](https://github.com/user-attachments/assets/062285f7-0b87-456c-a8a2-863c93f94f58)
+
+Till the machine is still active , i hope you're get a more fun through that , i'll complete it once retired ; be up !!!
+
+
+
+
+#ArtemisTEAM
