@@ -1,0 +1,78 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-28 09:21 CDT
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+Initiating Ping Scan at 09:21
+Scanning furni.htb (10.129.178.253) [4 ports]
+Completed Ping Scan at 09:21, 0.16s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 09:21
+Scanning furni.htb (10.129.178.253) [65535 ports]
+Discovered open port 22/tcp on 10.129.178.253
+Discovered open port 80/tcp on 10.129.178.253
+Increasing send delay for 10.129.178.253 from 0 to 5 due to max_successful_tryno increase to 5
+Increasing send delay for 10.129.178.253 from 5 to 10 due to max_successful_tryno increase to 6
+Discovered open port 8761/tcp on 10.129.178.253
+Warning: 10.129.178.253 giving up on port because retransmission cap hit (6).
+Completed SYN Stealth Scan at 09:21, 11.85s elapsed (65535 total ports)
+Initiating Service scan at 09:21
+Scanning 3 services on furni.htb (10.129.178.253)
+Completed Service scan at 09:21, 11.96s elapsed (3 services on 1 host)
+NSE: Script scanning 10.129.178.253.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 3.91s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.55s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.01s elapsed
+Nmap scan report for furni.htb (10.129.178.253)
+Host is up, received reset ttl 63 (0.12s latency).
+Scanned at 2025-04-28 09:21:26 CDT for 28s
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 d6:b2:10:42:32:35:4d:c9:ae:bd:3f:1f:58:65:ce:49 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpa5HH8lfpsh11cCkEoqcNXWPj6wh8GaDrnXst/q7zd1PlBzzwnhzez+7mhwfv1PuPf5fZ7KtZLMfVPuUzkUHVEwF0gSN0GrFcKl/D34HmZPZAsSpsWzgrE2sayZa3xZuXKgrm5O4wyY+LHNPuHDUo0aUqZp/f7SBPqdwDdBVtcE8ME/AyTeJiJrOhgQWEYxSiHMzsm3zX40ehWg2vNjFHDRZWCj3kJQi0c6Eh0T+hnuuK8A3Aq2Ik+L2aITjTy0fNqd9ry7i6JMumO6HjnSrvxAicyjmFUJPdw1QNOXm+m+p37fQ+6mClAh15juBhzXWUYU22q2q9O/Dc/SAqlIjn1lLbhpZNengZWpJiwwIxXyDGeJU7VyNCIIYU8J07BtoE4fELI26T8u2BzMEJI5uK3UToWKsriimSYUeKA6xczMV+rBRhdbGe39LI5AKXmVM1NELtqIyt7ktmTOkRQ024ZoSS/c+ulR4Ci7DIiZEyM2uhVfe0Ah7KnhiyxdMSlb0=
+|   256 90:11:9d:67:b6:f6:64:d4:df:7f:ed:4a:90:2e:6d:7b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNqI0DxtJG3vy9f8AZM8MAmyCh1aCSACD/EKI7solsSlJ937k5Z4QregepNPXHjE+w6d8OkSInNehxtHYIR5nKk=
+|   256 94:37:d3:42:95:5d:ad:f7:79:73:a6:37:94:45:ad:47 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHNmmTon1qbQUXQdI6Ov49enFe6SgC40ECUXhF0agNVn
+80/tcp   open  http    syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Furni | Home
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS POST
+8761/tcp open  http    syn-ack ttl 63 Apache Tomcat (language: en)
+| http-auth: 
+| HTTP/1.1 401 \x0D
+|_  Basic realm=Realm
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title.
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 09:21
+Completed NSE at 09:21, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 28.91 seconds
+           Raw packets sent: 108399 (4.770MB) | Rcvd: 89982 (3.603MB)

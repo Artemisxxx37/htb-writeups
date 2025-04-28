@@ -1,0 +1,2 @@
+web creds:
+	oscar190 : '0sc@r190_S0l!dP@sswd' 
