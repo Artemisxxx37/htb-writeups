@@ -1,0 +1,55 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-11 06:21 CDT
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 06:21
+Completed NSE at 06:21, 0.00s elapsed
+Initiating NSE at 06:21
+Completed NSE at 06:21, 0.00s elapsed
+Initiating NSE at 06:21
+Completed NSE at 06:21, 0.00s elapsed
+Initiating Ping Scan at 06:21
+Scanning planning.htb (10.129.145.18) [4 ports]
+Completed Ping Scan at 06:21, 0.16s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 06:21
+Scanning planning.htb (10.129.145.18) [1000 ports]
+Discovered open port 80/tcp on 10.129.145.18
+Discovered open port 22/tcp on 10.129.145.18
+Increasing send delay for 10.129.145.18 from 0 to 5 due to 667 out of 1667 dropped probes since last increase.
+Warning: 10.129.145.18 giving up on port because retransmission cap hit (2).
+Completed SYN Stealth Scan at 06:21, 0.70s elapsed (1000 total ports)
+Initiating Service scan at 06:21
+Scanning 2 services on planning.htb (10.129.145.18)
+Completed Service scan at 06:22, 6.27s elapsed (2 services on 1 host)
+NSE: Script scanning 10.129.145.18.
+Initiating NSE at 06:22
+Completed NSE at 06:22, 3.69s elapsed
+Initiating NSE at 06:22
+Completed NSE at 06:22, 0.53s elapsed
+Initiating NSE at 06:22
+Completed NSE at 06:22, 0.00s elapsed
+Nmap scan report for planning.htb (10.129.145.18)
+Host is up (0.15s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 62:ff:f6:d4:57:88:05:ad:f4:d3:de:5b:9b:f8:50:f1 (ECDSA)
+|_  256 4c:ce:7d:5c:fb:2d:a0:9e:9f:bd:f5:5c:5e:61:50:8a (ED25519)
+80/tcp open  http    nginx 1.24.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Edukate - Online Education Website
+|_http-server-header: nginx/1.24.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 06:22
+Completed NSE at 06:22, 0.00s elapsed
+Initiating NSE at 06:22
+Completed NSE at 06:22, 0.00s elapsed
+Initiating NSE at 06:22
+Completed NSE at 06:22, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.01 seconds
+           Raw packets sent: 2157 (94.884KB) | Rcvd: 4422 (659.600KB)
