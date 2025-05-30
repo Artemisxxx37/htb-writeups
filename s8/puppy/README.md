@@ -1,4 +1,7 @@
 
+![Puppy](https://github.com/user-attachments/assets/78a07797-664c-431c-8872-80041b63ff6c)
+
+
 
 
 # Reconnaissance phase 
@@ -62,6 +65,8 @@ Once you've found set of possible users , now use nxc to extract users in a file
 So use now the creds you have to bloodhound server in order to get ldap map
 
 	bloodhound-python -dc dc.puppy.htb -u 'levi.james' -p 'KingofAkron2025!' -d puppy.htb -c All -o bloodhound_results.json -ns 10.129.72.114
+ 
+![levi](https://github.com/user-attachments/assets/97685b40-9102-4d39-9108-066571655827)
 
 
 # Note : Now you've got all dump from bloodhound  , read relation between your targetted user and all group in the AD environnement : Remember when we were in smb shares , we saw DEV but can't actually read it , so here is the tip ; we lookup at the PUPPY-DEVS from bloodhound and notice that We able to do operations on the DEV SHARE   
@@ -71,11 +76,16 @@ So use now the creds you have to bloodhound server in order to get ldap map
 
 Once done , back to smb share and loggin  so grab recovery.kbdx file 
 
+![Screenshot_2025-05-30_05_18_06](https://github.com/user-attachments/assets/4abfa61e-7780-40c6-9382-6c619bed4e68)
+
 
 # Then now , how can we breakdown the pass and read keepass file , let's use the awesome script named keepass4brute : here is the link https://github.com/r3nt0n/keepass4brute
 
 
 		Usage ./keepass4brute.sh <kdbx-file> <wordlist>
+
+  ![Screenshot_2025-05-23_04_07_14](https://github.com/user-attachments/assets/8ce6111e-fb4b-4a28-930b-aa8c8aa6ebd1)
+
 
 # Got it : here is the creds we need : "ant.edwards : Antman2025!"
 
@@ -102,8 +112,20 @@ As you may see , the user is able to write user's pass , so let's make the trick
 
 Now logon as adam.silver and grab the flag the flag 
 
+![Screenshot_2025-05-30_05_40_07](https://github.com/user-attachments/assets/00df0e4a-d6c9-4063-afdc-d9b35706d80d)
+
+
 # now , let's do the same trick , back to bloodyAD and see what adam.silver user is able to perform
 
+![backups](https://github.com/user-attachments/assets/3965e3ae-1537-4839-b257-3c97c152346e)
+
+![Screenshot_2025-05-30_05_42_02](https://github.com/user-attachments/assets/496070ea-fcba-4ba7-aa9b-0fdbca87de55)
+
+
+
+![Screenshot_2025-05-30_05_48_36](https://github.com/user-attachments/assets/03532534-94b0-438e-af8e-a44994fa402c)
+
+grab steph.cooler creds from this file 
 
 
 
@@ -130,4 +152,11 @@ Now logon as adam.silver and grab the flag the flag
 						    <search-filter>
 						        <filter>(&(objectClass=person)(uid=%s))</filter>
 						    </search-filter>
-						</ldap-config>
+				
+      </ldap-config>
+
+
+
+
+
+![Screenshot_2025-05-30_05_53_07](https://github.com/user-attachments/assets/6eec496f-4562-4689-8c8a-7dcd00cf7ede)
